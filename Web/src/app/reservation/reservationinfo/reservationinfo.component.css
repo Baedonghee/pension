@@ -1,0 +1,131 @@
+#sh_content_tit{
+	margin-bottom:20px;
+	overflow:hidden
+}
+#sh_content_tit:after{
+	clear:both
+}
+#sh_content_tit h3{
+	float:left;
+	padding:0;
+	font-size:2.1em;
+	line-height:1.3em;
+	color:#fff;
+	font-weight:none;
+	letter-spacing:-0.03em
+}
+#sh_content_tit span{
+	float:right;
+	margin-top:12px;
+	padding-left:15px;
+	color:#666
+}
+h4 {
+	color: #bdbdbd;
+	font-size:1.7em;
+}
+table, th, td {
+	
+	border: 1px solid #444444;
+	border-collapse: collapse;
+
+}
+th, td {
+	padding: 5px;
+	color: white;
+	text-align: center;
+}
+.payinfotd { 
+	background-color: #414141;
+	color: #cccccc;
+}
+.payinfotextcolor {
+	color: #7b7b7e;
+}
+.payinfo table {
+	position: relative;
+	margin: auto;
+	width: 98%;
+	height: 400px;
+	float: center;
+}
+.seasoninfo {
+	padding-top: 20px;
+}
+.seasoninfo table {
+	position: relative;
+	margin: auto;
+	width: 98%;
+	height: 150px;
+	float: center;
+}
+.seasoninfo th, td {
+	background-color: #272727;
+	color: #747474;
+	text-align: left;
+	padding-left: 20px;
+}
+.reservationinfo {
+	padding-top: 20px;
+}
+.reservationinfo table {
+	position: relative;
+	margin: auto;
+	width: 98%;
+	height: 120px;
+	float: center;
+}
+.reservationinfo th, td {
+	background-color: #272727;
+	color: #747474;
+	text-align: left;
+	padding-left: 20px;
+}
+.reservationcheck {
+	padding-top: 20px;
+}
+.reservationcheck table {
+	position: relative;
+	margin: auto;
+	width: 98%;
+	height: 120px;
+	float: center;
+}
+.reservationcheck th, td {
+	background-color: #272727;
+	color: #747474;
+	text-align: left;
+	padding-left: 20px;
+}
+.basic {
+	padding-top: 20px;
+}
+.basic table {
+	position: relative;
+	margin: auto;
+	width: 98%;
+	height: 120px;
+	float: center;
+}
+.basic th, td {
+	background-color: #272727;
+	color: #747474;
+	text-align: left;
+	padding-left: 20px;
+}
+.notice {
+	padding-top: 20px;
+}
+.notice table {
+	position: relative;
+	margin: auto;
+	width: 98%;
+	height: 150px;
+	float: center;
+}
+.notice th, td {
+	background-color: #272727;
+	color: #747474;
+	text-align: left;
+	padding-left: 20px;
+}

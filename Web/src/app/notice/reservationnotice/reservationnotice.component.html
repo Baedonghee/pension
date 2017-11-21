@@ -1,0 +1,47 @@
+<div id="sh_content_tit">
+	<h3>예약문의</h3>
+	<span>HOME > Community > 예약문의 </span>
+</div>
+<div class="noticetable">
+	<table width="100%" border="0" cellpadding="0" cellspacing="0" style="font-weight:bold; color:#DADDEA;">
+		<tr style="background-color: #474747" height="50" align="center">
+			<td width="50">번호</td>
+			<td>제&nbsp;&nbsp;&nbsp;목</td>
+			<td width="110">글쓴이</td>
+			<td width="100">날짜</td>
+			<td width="50">조회</td>
+		</tr>
+	</table>
+	<table width="100%" border="0" cellpadding="0" cellspacing="0">
+		<tr height="50" align="center" *ngFor="let reservationnotice of reservationnotice | paginate : { itemsPerPage: 10, currentPage: p}">
+			<td width="50">
+				<span style="font:normal 11px tahoma; color:#B3B3B3;">{{reservationnotice.reservation_noticeid}}</span>
+			</td>
+			<td align="left" style="word-break: break-all;">
+				<span style="display: block; overflow:hidden;"><a role="button" style="cursor:pointer; text-decoration: none; color:#838383" (click)="onClickDetailreservation(reservationnotice.reservation_notice_id)">{{reservationnotice.reservation_notice_title}}</a></span>
+			</td>
+			<td align="left" width="110">
+				<span style="display: block; overflow:hidden; color: white">{{reservationnotice.reservation_notice_userid}}</span>
+			</td>
+			<td width="100">
+				<span style="font:normal 11px tahoma; color:#BABABA">{{reservationnotice.reservation_notice_date}}</span>
+			</td>
+			<td width="50">
+				<span style="font:normal 11px tahoma; color:#BABABA">{{reservationnotice.reservation_notice_noticecount}}</span>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+
+<div style="clear:both; margin-top: 7px; height:31px; padding-right: 1%">
+	<div style="float: left;">
+	</div>
+	<div style="float: right">
+		<a class="btn btn-default pull-right" [routerLink]="['/notice/reservationnotice/add']">글쓰기</a>
+	</div>
+
+</div>
+<div style="text-align: center;">
+	<pagination-controls class="my-pagination" (pageChange)="p = $event"></pagination-controls>
+</div>

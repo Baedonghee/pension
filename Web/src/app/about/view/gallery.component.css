@@ -1,0 +1,19 @@
+ul {
+	position: relative;
+	padding: 0;
+	width: 1050px;
+	margin:20px auto;
+	padding-left: 38px;
+}
+li {
+	display: inline;
+}
+.tn {
+	margin: 2px 0px;
+	box-shadow:#999 1px 1px 3px 1px;
+	cursor: pointer;
+}
+.modal-content {
+	margin-top: 200px;
+	width: 702px !important;
+}

@@ -1,0 +1,40 @@
+#sh_content_tit{
+	margin-bottom:20px;
+	overflow:hidden
+}
+#sh_content_tit:after{
+	clear:both
+}
+#sh_content_tit h3{
+	float:left;
+	padding:0;
+	font-size:2.1em;
+	line-height:1.3em;
+	color:#fff;
+	font-weight:none;
+	letter-spacing:-0.03em
+}
+#sh_content_tit span{
+	float:right;
+	margin-top:12px;
+	padding-left:15px;
+	color:#666
+}
+.pickupimgdiv {
+	position: relative;
+	float: left;
+}
+.pickuptextdiv {
+	position: relative;
+	padding-left: 520px;
+	
+}
+.pickuptextdiv h3 {
+	color: #888888;
+}
+.pickuptextdiv h4, p {
+	color: #808688;
+}
+.hrclass {
+	margin-top: 200px; 
+}

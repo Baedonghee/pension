@@ -1,0 +1,172 @@
+<div class="abc">
+<div id="sh_content_tit">
+	<h3>예약문의</h3>
+	<span>HOME > Community > 예약문의 </span>
+</div>
+
+<div class="detailnotice" *ngIf="showdiv">
+	<table width="97%" align="center" cellpadding="0" cellspacing="0" >
+	<tr>
+		<td >
+		<div style="clear:both; height: auto;" >
+			<div style="float: left; margin-top: 6px;">
+			<span style="color: #888888">작성일 : {{reservationnoticedetail.reservation_notice_date}}</span>
+			</div>
+			<div style="float: right">
+			<button class="btn btn-default" (click)="editmodal.open()">수정</button>
+			<button class="btn btn-default" (click)="deletemodal.open()">삭제</button>
+			</div>
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr >
+				<td height="1" bgcolor="#CCCBD7"></td>
+			</tr>
+		</table>
+		<table border="0" cellpadding="0" cellspacing="0" width="100%">
+			<tr  height="28" style="border-bottom: 1px solid #fff; height: 50px;">
+				<td style="padding: 0px 0 0 0 0px; ">
+					<div style=" font-size: 13px; font-weight: bold; word-break: break-all; color: #888888;">{{reservationnoticedetail.reservation_notice_title}}</div>
+				</td>
+				<td align="right" style="padding: 6px 6px 0 0; width: 120">
+				</td>
+			</tr>
+		</table>
+		<table border="0" cellpadding="0" cellspacing="0" width="100%">
+			<tr style="border-bottom: 1px solid #fff; height: 50px;">
+				<td height="30" style="color:#888;">
+					<div style="float: left;">
+					&nbsp;글쓴이 : 
+					<span class="guest">{{reservationnoticedetail.reservation_notice_userid}}</span>
+					</div>
+					<div style="float: right;">
+					조회 : {{reservationnoticedetail.reservationnotice_noticecount}}
+					</div>
+				</td>
+			</tr>
+
+			<tr>
+				<td height="150" style="word-break: break-all; padding: 10px">
+					<span id="writeContents"><p style="margin: 0px; color: #888888;">{{reservationnoticedetail.reservation_notice_content}}</p></span>
+				</td>
+			</tr>
+		</table>
+		<br>
+		<div style="position: relative; height: auto;">
+			<a ></a>
+				<table width="100%" cellpadding="0" cellspacing="0" border="0" >
+					<tr  *ngFor="let replay of reservationnoticedetail.reservation_notice_replay">
+						<td></td>
+						<td width="100%">
+							<table border="0" cellpadding="0" cellspacing="0" width="100%">
+							<tr>
+								<td height="1" colspan="3" bgcolor="#dddddd"></td>
+							</tr>
+							<tr>
+								<td height="1" colspan="3"></td>
+							</tr>
+							<tr >
+								<td >
+									<div style="height: 28px; clear: both; line-height: 28px;">
+									<div style="float: left; margin: 2px 0 0 2px">
+									<strong><span class="member" style="color: #888888">{{replay.reservationnoticereplay_userid}}</span></strong>
+									<span style="color:#888888; font-size: 11px;">{{replay.reservationnoticereplay_date}}</span>
+									</div>
+									<div style="float: right; margin-top: 5px;">
+										<a style="color: #888888; cursor:pointer" (click)="editreplayPassword(replay); editreplaymodal.open()">수정</a>
+										<a style="color: #888888">/</a>
+										<a style="color: #888888; cursor:pointer" (click)="deletereplayPassword(replay); deletereplaymodal.open()">삭제</a>
+									</div>
+									</div>
+									<div style="line-height: 20px; padding: 7px; word-break: break-all; overflow: hidden; clear: both; color: #888888;"> {{replay.reservationnoticereplay_content}}
+									</div>
+									
+								</td>
+							</tr>
+							<tr>
+								<td height="5" colspan="3"></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div style="">
+		<table width="100%" border="0" cellpadding="1" cellspacing="1" bgcolor="#dddddd" >
+			<tr>
+				<td>
+				<table width="100%" cellpadding="3" height="156" cellspacing="0" bgcolor="#ffffff" style="border: 1px solid #fff; ">
+					<tr>
+						<td colspan="2" style="padding: 5px 0 0 5px;">
+							<span style="color: white; padding-right: 10px;">이름</span><input class="textinput" type="text" maxlength="20" size="10" [(ngModel)]="replayname" required="">
+							<span style="color: white; padding-right: 10px;">패스워드</span><input class="passwordinput" type="password" maxlength="20" size="10" [(ngModel)]="replaypassword" required="">
+						</td>
+					</tr>
+					<tr>
+						<td width="95%">
+							<textarea id="wr_content" name="wr_content" rows="8" required="" style="width: 100%; word-break: break-all;" [(ngModel)]="replaycontent" class="textareainput"></textarea>
+						</td>
+						<td width="85" align="center">
+							<div><button class="btn btn-default" (click)="replayadd()">등록</button></div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+</div>
+</div>
+
+<modal #editmodal>
+    <modal-header [show-close]="true">
+        <h4 class="modal-title">비밀번호를 입력해 주세요</h4>
+    </modal-header>
+    <modal-body>
+        비밀번호 : <input type="password" [(ngModel)]="editpassword"/>
+    </modal-body>
+    <modal-footer>
+    	<button type="button" class="btn btn-default" data-dismiss="modal" (click)="editmodal.dismiss()">Cancel</button>
+    	<button type="button" class="btn btn-primary" (click)="editpasswordCheck()">Ok</button>
+    </modal-footer>
+</modal>
+
+<modal #editreplaymodal>
+    <modal-header [show-close]="true">
+        <h4 class="modal-title">댓글 수정</h4>
+    </modal-header>
+    <modal-body>
+    	<a style="text-decoration: none; color:black; padding-right: 24px;">이름 :</a> <input type="text" [(ngModel)]="editreplayname"/> <br/><br/>
+        <a style="text-decoration: none; color:black;">비밀번호 : </a><input type="password" [(ngModel)]="editreplaypassword"/> <br/><br/>
+        <textarea style="width: 100%; height:80px;" [(ngModel)]="editreplaycontent"></textarea>
+    </modal-body>
+    <modal-footer>
+    	<button type="button" class="btn btn-default" data-dismiss="modal" (click)="editreplaymodal.dismiss()">Cancel</button>
+    	<button type="button" class="btn btn-primary" (click)="editreplay() ">Ok</button>
+    </modal-footer>
+</modal>
+
+<modal #deletereplaymodal>
+    <modal-header [show-close]="true">
+        <h4 class="modal-title">비밀번호를 입력해 주세요</h4>
+    </modal-header>
+    <modal-body>
+        비밀번호 : <input type="password" [(ngModel)]="deletereplaypassword"/>
+    </modal-body>
+    <modal-footer>
+    	<button type="button" class="btn btn-default" data-dismiss="modal" (click)="editreplaymodal.dismiss()">Cancel</button>
+    	<button type="button" class="btn btn-primary" (click)="deletereplay()">Ok</button>
+    </modal-footer>
+</modal>
+
+
+
+<modal #deletemodal>
+    <modal-header [show-close]="true">
+        <h4 class="modal-title">비밀번호를 입력해 주세요</h4>
+    </modal-header>
+    <modal-body>
+        비밀번호 : <input type="password" [(ngModel)]="deletepassword"/>
+    </modal-body>
+    <modal-footer>
+    	<button type="button" class="btn btn-default" data-dismiss="modal" (click)="deletemodal.dismiss()">Cancel</button>
+    	<button type="button" class="btn btn-primary" (click)="deletepasswordCheck()">Ok</button>
+    </modal-footer>
+</modal>

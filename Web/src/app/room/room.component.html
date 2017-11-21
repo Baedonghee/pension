@@ -1,0 +1,45 @@
+<div id="sh_content_tit">
+	<h3>List Type</h3>
+	<span>HOME > Room View > ListType </span>
+</div>
+<div class="room1">
+	<img class="imgsize" [src]="room1img" [routerLink]="['/room/detailroom1']"/>
+	<a data-toggle="modal" data-target="#selectedImageModal" (click)=setSelectedImage()><span class="glyphicon glyphicon-zoom-in white"></span></a>
+	<h3>새벽숲속</h3>
+	<p>기준인원6명(최대8명)</p>
+</div>
+<div class="room2">
+	<img class="imgsize" [src]="room2img" [routerLink]="['/room/detailroom2']"/>
+	<a data-toggle="modal" data-target="#selectedImageModal" (click)=setSelectedImage2()><span class="glyphicon glyphicon-zoom-in white"></span></a>
+	<h3>별빛가득</h3>
+	<p>기준인원4명(최대6명)</p>
+</div>
+<div class="room3">
+	<img class="imgsize" [src]="room3img" [routerLink]="['/room/detailroom3']"/>
+	<a data-toggle="modal" data-target="#selectedImageModal" (click)=setSelectedImage3()><span class="glyphicon glyphicon-zoom-in white"></span></a>
+	<h3>초원위에</h3>
+	<p>기준인원4명(최대6명)</p>
+</div>
+<div class="room4">
+	<img class="imgsize" [src]="room4img" [routerLink]="['/room/detailroom4']"/>
+	<a data-toggle="modal" data-target="#selectedImageModal" (click)=setSelectedImage4()><span class="glyphicon glyphicon-zoom-in white"></span></a>
+	<h3>구름위에</h3>
+	<p>기준인원2명(최대4명)</p>
+</div>
+<div class="room5">
+	<img class="imgsize" [src]="room5img" [routerLink]="['/room/detailroom5']"/>
+	<a data-toggle="modal" data-target="#selectedImageModal" (click)=setSelectedImage5()><span class="glyphicon glyphicon-zoom-in white"></span></a>
+	<h3>나무사이</h3>
+	<p>기준인원2명(최대4명)</p>
+</div>
+
+
+<div class="modal fade" id="selectedImageModal">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-body">
+				<img *ngIf="selectedImage" src="{{selectedImage}}">
+			</div>
+		</div>
+	</div>
+</div>

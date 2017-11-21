@@ -1,0 +1,89 @@
+#sh_content_tit{
+	margin-bottom:20px;
+	overflow:hidden
+}
+#sh_content_tit:after{
+	clear:both
+}
+#sh_content_tit h3{
+	float:left;
+	padding:0;
+	font-size:2.1em;
+	line-height:1.3em;
+	color:#fff;
+	font-weight:none;
+	letter-spacing:-0.03em
+}
+#sh_content_tit span{
+	float:right;
+	margin-top:12px;
+	padding-left:15px;
+	color:#666
+}
+table {
+	position: relative;
+	margin: auto;
+	width: 98%;
+	height: auto;
+	float: center;
+}
+table, th, td {
+	border: 1px solid #444444;
+	border-collapse: collapse;
+
+}
+th, td {
+	padding: 5px;
+	color: white;
+	text-align: center;
+}
+ul {
+	list-style: none;
+	position: relative;
+	
+	text-align: center;
+}
+li {
+	float: left;
+	position: relative;
+	display: inline;
+}
+.yearmonth {
+	padding-left: 400px;
+	padding-bottom: 30px;
+}
+.yearmonth p {
+	padding-left:10px;
+	padding-right: 10px;
+	font-size: 2em;
+	color:white;
+}
+.white {
+	padding-top: 6px;
+	font-size: 1.8em;
+	color: white;
+}
+.abc {
+	color:white;
+}
+.abc:hover {
+	display: block;
+}
+.red {
+	text-align: left;
+	color: red;
+}
+.blue {
+	text-align: left;
+	color: #838383;
+}
+.days {
+	text-align: right;
+}
+.daytext {
+	color: #bdbdbd;
+}
+.black {
+	text-align: left;
+	color: white;
+}

@@ -1,0 +1,57 @@
+#sh_content_tit{
+	margin-bottom:20px;
+	overflow:hidden
+}
+#sh_content_tit:after{
+	clear:both
+}
+#sh_content_tit h3{
+	float:left;
+	padding:0;
+	font-size:2.1em;
+	line-height:1.3em;
+	color:#fff;
+	font-weight:none;
+	letter-spacing:-0.03em
+}
+#sh_content_tit span{
+	float:right;
+	margin-top:12px;
+	padding-left:15px;
+	color:#666
+}
+.noticetable {
+	position: relative;
+	width: 98%;
+	margin-left: 1%;
+}
+table {
+	text-align: center;
+}
+.btnpadding {
+	margin-top: 10px;
+	margin-right: 1%;
+}
+.paginationdiv {
+	padding-left: 100px;
+}
+.my-pagination /deep/ .ngx-pagination .current {
+	color:white;
+	background: #252525;
+}
+.my-pagination /deep/ .ngx-pagination .current:hover {
+	background: #585858;
+}
+.my-pagination /deep/ .ngx-pagination .disabled {
+	background: #2e2e2e;
+}
+.my-pagination /deep/ .ngx-pagination .disabled:hover {
+	background: #585858;
+}
+.my-pagination /deep/ .ngx-pagination a {
+	background: #2e2e2e;
+	color:#cacaca;
+}
+.my-pagination /deep/ .ngx-pagination a:hover {
+	background: #585858;
+}

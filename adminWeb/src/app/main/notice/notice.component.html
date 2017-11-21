@@ -1,0 +1,42 @@
+<div class="container">
+<h3>공지사항</h3>
+	<table class="table table-striped text-align">
+		<thead>
+			<tr>
+				<th style="width: 10%">번호</th>
+				<th >제목</th>
+				<th style="width: 10%">작성자</th>
+				<th style="width: 10%">날짜</th>
+				<th style="width: 10%">편집</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor = "let notice of noticelist | paginate : { itemsPerPage: 10, currentPage: p}">
+				<td>{{notice.noticeid}}</td>
+				<td><a role="button" style="cursor:pointer; text-decoration: none;" (click)="onNoticeinfo(notice); noticemodal.open()">{{notice.notice_title}}</a></td>
+				<td>{{notice.notice_userid}}</td>
+				<td>{{notice.notice_date}}</td>
+				<td><a class="btn btn-default button-size" (click)="onEdit(notice)">수정</a><a class="btn btn-default button-size" (click)="onDelete(notice)">삭제</a></td>
+			</tr>
+			
+		</tbody>
+	</table>
+	<div style="text-align: center;">
+		<pagination-controls class="my-pagination" (pageChange)="p = $event"></pagination-controls>
+	</div>
+	<hr />
+	
+	<a class="btn btn-default pull-right" [routerLink]="['/main/notice/add']">글쓰기</a>
+</div>
+
+<modal #noticemodal>
+    <modal-header [show-close]="true">
+        <h4 class="modal-title">예약자정보</h4>
+    </modal-header>
+    <modal-body>
+        내용 : {{noticecontent}}
+    </modal-body>
+    <modal-footer>
+    	<button type="button" class="btn btn-default" data-dismiss="modal" (click)="noticemodal.dismiss()">OK</button>
+    </modal-footer>
+</modal>

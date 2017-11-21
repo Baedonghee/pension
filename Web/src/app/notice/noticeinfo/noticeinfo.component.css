@@ -1,0 +1,63 @@
+#sh_content_tit{
+	margin-bottom:20px;
+	overflow:hidden
+}
+#sh_content_tit:after{
+	clear:both
+}
+#sh_content_tit h3{
+	float:left;
+	padding:0;
+	font-size:2.1em;
+	line-height:1.3em;
+	color:#fff;
+	font-weight:none;
+	letter-spacing:-0.03em
+}
+#sh_content_tit span{
+	float:right;
+	margin-top:12px;
+	padding-left:15px;
+	color:#666
+}
+.my-pagination /deep/ .ngx-pagination .current {
+	color:white;
+	background: #252525;
+}
+.my-pagination /deep/ .ngx-pagination .current:hover {
+	background: #585858;
+}
+.my-pagination /deep/ .ngx-pagination .disabled {
+	background: #2e2e2e;
+}
+.my-pagination /deep/ .ngx-pagination .disabled:hover {
+	background: #585858;
+}
+.my-pagination /deep/ .ngx-pagination a {
+	background: #2e2e2e;
+	color:#cacaca;
+}
+.my-pagination /deep/ .ngx-pagination a:hover {
+	background: #585858;
+}
+/*table {
+	position: relative;
+	margin: auto;
+	width: 98%;
+	height: auto;
+	float: center;
+}
+table, th, td {
+	border: 1px solid white;
+	border-collapse: collapse;
+
+}
+th, td {
+	padding: 5px;
+	color: white;
+	text-align: center;
+}
+a {
+	text-decoration:none;
+	text-transform:uppercase;
+}*/

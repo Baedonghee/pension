@@ -1,0 +1,48 @@
+.main {
+	width: 100%;
+	height: auto;
+	background: #636363;
+	z-index: 1;
+
+}
+.main1 {
+	position: relative;
+	width: 607px;
+	height: 747px;
+	float: left;
+	margin-top: 10px; 
+}
+.main2 {
+	position: relative;
+	float: right;
+	width: 453px;
+	height: 747px;
+}
+.mainroom, .mainetc, .mainevent {
+	float: left;
+	margin: 0 15px 15px 0;
+
+
+}
+
+.mainroom {
+	width: 453px;
+	height: 236px;
+	margin-top: 10px; 
+}
+.mainetc {
+	width: 224px;
+	height: 126px;
+}
+.mainevent {
+	width: 224px;
+	height: 355px;
+}
+.mainreservation {
+	position: absolute;
+	padding-top: 10px;
+	bottom: 0;
+	right: 0;
+	width: 220px;
+	height: 497px;
+}

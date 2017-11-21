@@ -1,0 +1,24 @@
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+     <a class="menu"><i class="fa fa-bars" id="menu_icon"></i></a>
+      <a class="navbar-brand" [routerLink]="['/main']">AdminPage</a>
+    </div><!--navbar-header close-->
+    <div class="collapse navbar-collapse drop_menu" id="content_details">
+      <ul class="nav navbar-nav">
+        <li><a href="#" [routerLink]="['/main/reservation']">전체예약현황</a></li>
+        <li><a href="#" [routerLink]="['/main/reservation/waiting']">전체예약대기현황</a></li>
+        <li><a href="#" [routerLink]="['/main/notice']">공지사항</a></li>
+        <li><a href="#" [routerLink]="['/main/reservation/notice']">예약문의</a></li>
+        <li><a href="#" [routerLink]="['/main/popup']">팝업메뉴</a></li>
+      </ul><!--nav navbar-nav close-->
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#" (click)="onLogout()">Logout</a></li>
+      </ul>
+    </div><!--collapse navbar-collapse drop_menu close-->
+  </div><!--container-fluid close-->
+</nav><!--navbar navbar-inverse close-->
+<br>
+<br>
+<br>
+

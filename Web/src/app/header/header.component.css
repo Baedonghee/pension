@@ -1,0 +1,169 @@
+a {
+	text-decoration:none
+}
+.header {
+	z-index: 6;
+	position: relative;
+	height: 80px;
+	background: #000;
+}
+.headertext {
+	color: white;
+}
+.headerphoto {
+	width:150px;
+	position: relative;
+	display: inline-block;
+	float: left;
+
+}
+.headerImg {
+	border: 0;
+	outline: 0;
+}
+.headerul {
+	display: inline-block;
+}
+.about {
+	position: relative;
+	z-index: 7;
+	background: #fff;
+	width:100px;
+	height:100px;
+	float: center;
+	text-align: center;
+	margin-right: 30px;
+}
+h4 {
+	color: white;
+}
+#top_nav {
+	float: left;
+	list-style: none;
+	margin: 0 auto;
+	display: block;
+}
+#top_nav ul.aboutul {
+	width: 100px;
+	height: 105px;
+	left: 203px;
+	background: #000;
+	position: absolute;
+	z-index: 7;
+	display: block;
+	list-style: none;
+	margin: 0px 0 0px 0;
+	padding: 0 0 0 0;
+}
+#top_nav ul.roomul {
+	width: 115px;
+	height: 35px;
+	left: 330px;
+	background: #000;
+	position: absolute;
+	z-index: 7;
+	display: block;
+	list-style: none;
+	margin: 0px 0 0px 0;
+	padding: 0 0 0 0;
+}
+#top_nav ul.specialul {
+	width: 105px;
+	height: 105px;
+	left: 475px;
+	background: #000;
+	position: absolute;
+	z-index: 7;
+	display: block;
+	list-style: none;
+	margin: 0px 0 0px 0;
+	padding: 0 0 0 0;
+}
+#top_nav ul.reservationul {
+	width: 130px;
+	height: 70px;
+	left: 605px;
+	background: #000;
+	position: absolute;
+	z-index: 7;
+	display: block;
+	list-style: none;
+	margin: 0px 0 0px 0;
+	padding: 0 0 0 0;
+}
+#top_nav ul.tourul {
+	width: 120px;
+	height: 140px;
+	left: 750px;
+	background: #000;
+	position: absolute;
+	z-index: 7;
+	display: block;
+	list-style: none;
+	margin: 0px 0 0px 0;
+	padding: 0 0 0 0;
+}
+#top_nav ul.communityul {
+	width: 120px;
+	height: 70px;
+	left: 885px;
+	background: #000;
+	position: absolute;
+	z-index: 7;
+	display: block;
+	list-style: none;
+	margin: 0px 0 0px 0;
+	padding: 0 0 0 0;
+}
+#top_nav ul li {
+	text-align: center;
+	font-size: 15px;
+	float: none;
+	
+}
+#top_nav ul a {
+	display:block;
+	line-height:35px;
+	color:#666;
+	text-transform:uppercase;
+	color:#adadad;
+	font-weight:normal;
+	padding:0 0 0 0px;
+}
+
+li.list01{
+	margin: 30px 0 0 0;
+	padding: 0 0 0 2.6em;
+	border: 0;
+	float: left;
+}
+li.list02 {
+	margin: 30px 0 0 0;
+	padding: 0 0 0 4.5em;
+	border: 0;
+	float: left;
+}
+li.list03 {
+	margin: 30px 0 0 0;
+	padding: 0 0 0 4.5em;
+	border: 0;
+	float: left;
+}
+li.list04 {
+	margin: 30px 0 0 0;
+	padding: 0 0 0 4.5em;
+	border: 0;
+	float: left;
+}
+li.list05 {
+	margin: 30px 0 0 0;
+	padding: 0 0 0 5em;
+	border: 0;
+	float: left;
+}
+li.list06 {
+	margin: 30px 0 0 0;
+	padding: 0 0 0 5em;
+	border: 0;
+	float: left;
+}

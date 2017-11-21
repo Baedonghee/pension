@@ -1,0 +1,18 @@
+#sh_content {
+	z-index:4;
+	position:relative;
+	float:left;
+	padding:15px 0 15px 0;
+	width:1070px;
+	height: 80px;
+	background:#2e2e2e;
+	font-size:1.1em;
+	zoom:1
+}
+p {
+	font-size: 13px;
+	color: #646464;
+}
+.footerdiv {
+
+}

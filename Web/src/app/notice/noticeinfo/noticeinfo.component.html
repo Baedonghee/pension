@@ -1,0 +1,38 @@
+<div id="sh_content_tit">
+	<h3>공지사항</h3>
+	<span>HOME > Community > 공지사항 </span>
+</div>
+<div class="noticetablediv">
+	<table width="100%" border="0" cellpadding="0" cellspacing="0" style="font-weight:bold; color:#DADDEA;">
+		<tr style="background-color: #474747" height="50" align="center">
+			<td width="50">번호</td>
+			<td>제&nbsp;&nbsp;&nbsp;목</td>
+			<td width="110">글쓴이</td>
+			<td width="100">날짜</td>
+			<td width="50">조회</td>
+		</tr>
+	</table>
+	<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border: 0px solid white;">
+		<tr height="50" align="center" *ngFor="let notice of noticelist | paginate : { itemsPerPage: 10, currentPage: p}">
+			<td width="50">
+				<span style="font:normal 11px tahoma; color:#B3B3B3;">{{notice.noticeid}}</span>
+			</td>
+			<td align="left" style="word-break: break-all;">
+				<span style="display: block; overflow:hidden; "><a role="button" style="cursor:pointer; text-decoration: none; color:#838383" (click)="onClickDetailnotice(notice)">{{notice.notice_title}}</a></span>
+			</td>
+			<td align="left" width="110">
+				<span style="display: block; overflow:hidden; color: white">{{notice.notice_userid}}</span>
+			</td>
+			<td width="100">
+				<span style="font:normal 11px tahoma; color:#BABABA">{{notice.notice_date}}</span>
+			</td>
+			<td width="50">
+				<span style="font:normal 11px tahoma; color:#BABABA">{{notice.notice_count}}</span>
+			</td>
+		</tr>
+		
+	</table>
+</div>
+<div style="text-align: center;">
+	<pagination-controls class="my-pagination" (pageChange)="p = $event"></pagination-controls>
+</div>

@@ -1,0 +1,27 @@
+<div id="sh_content_tit">
+	<h3>공지사항</h3>
+	<span>HOME > Community > 공지사항 </span>
+</div>
+<div class="detailnotice">
+	<div class="topnav">
+		<div class="datetime">
+			<p>{{noticedetail.notice_date}}</p>
+		</div>
+		<div class="list">
+			<a class="btn btn-default pull-right" [routerLink]="['/notice']">목록</a>
+		</div>
+	</div>
+	<div class="tableclass">
+		<table>
+			<tr>
+				<td style="color:">제목 : {{noticedetail.notice_title}}</td>
+			</tr>
+			<tr>
+				<td style="height:50px">글쓴이: {{noticedetail.notice_userid}}</td>
+			</tr>
+			<tr>
+				<td style="height: 300px">{{noticedetail.notice_content}}</td>
+			</tr>
+		</table>
+	</div>
+</div>

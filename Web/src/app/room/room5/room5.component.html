@@ -1,0 +1,84 @@
+<div id="sh_content_tit">
+	<h3>나무사이</h3>
+	<span>HOME > Room View > 나무사이 </span>
+</div>
+<hr>
+<div class="room">
+	<img [src]="roommain" />
+	<ul class="roomthumbnail">
+		<li><span class="glyphicon glyphicon-chevron-left white" (click)="prepage()"></span></li>
+		<li><img *ngIf="room1main" [src]="room1main" (click)="imageChange(room1main)" class="roomthumbnailimg" /></li>
+		<li><img *ngIf="room2main" [src]="room2main" (click)="imageChange(room2main)" class="roomthumbnailimg" /></li>
+		<li><img *ngIf="room3main" [src]="room3main" (click)="imageChange(room3main)" class="roomthumbnailimg" /></li>
+		<li><img *ngIf="room4main" [src]="room4main" (click)="imageChange(room4main)" class="roomthumbnailimg" /></li>
+		<li><img *ngIf="room5main" [src]="room5main" (click)="imageChange(room5main)" class="roomthumbnailimg" /></li>
+		<li><span class="glyphicon glyphicon-chevron-right white" (click)="nextpage()"></span></li>
+	</ul>
+</div>	
+<hr>
+<div class="roominfo">
+	<h3>방 정보</h3>
+	<table>
+		<tr class="roominfotr">
+			<th>객실명</th>
+			<th>형태(스타일)</th>
+			<th>크기</th>
+			<th>인원(기준/최대)</th>
+		</tr>
+		<tr class="roominfoth">
+			<th>나무사이</th>
+			<th>원룸(온돌룸+주방+화장실)</th>
+			<th>12평</th>
+			<th>2/4</th>
+		</tr>
+	</table>
+</div>
+<hr>
+<div class="payinfo">
+	<h3>가격 정보</h3>
+	<table>
+		<tr class="payinfotr">
+			<td colspan="2">비수기</td>
+			<td colspan="2">준성수기</td>
+			<td colspan="2">성수기</td>
+			<th rowspan="2">추가요금</th>
+		</tr>
+		<tr class="payinfotr">
+			<td style="width:15%">주중</td>
+			<td style="width:15%">금요일/토요일</td>
+			<td style="width:15%">주중</td>
+			<td style="width:15%">금요일/토요일</td>
+			<td style="width:15%">주중</td>
+			<td style="width:15%">금요일/토요일</td>
+		</tr>
+		<tr class="payinfotd">
+			<td>80,000</td>
+			<td>100,000</td>
+			<td>150,000</td>
+			<td>150,000</td>
+			<td>150,000</td>
+			<td>150,000</td>
+			<td>10,000</td>
+		</tr>
+	</table>
+</div>
+<hr>
+<div class="iteminfo">
+	<h3>시설안내</h3>
+	<table>
+		<tr>
+			<td>노래방, 바베큐, 벽난로, 냉장고, 전자제품(에어컨, 전자렌지, 커피포트, 전기쿡탑, 부르스터, 전기밥솥, 헤어드라이기, UHD TV, 노래방, 무선마이크, 대형스피커, 노래방리모콘, 냉장고, 김치냉장고 등), 그외 용품(쇼파, 거실 카패트, 웨버 그릴, 수건, 비누, 각티슈, 화장지, 집게, 고기불판, 후라이팬, 수저, 각종 그릇, 물컵 등 )</td>
+		</tr>
+	</table>
+</div>
+<hr>
+<div class="etcinfo">
+	<h3>기타 사항</h3>
+	<table>
+		<tr>
+			<td>영,유아도 추가 인원에 포함되어 0세 이상 1만원의 추가 요금이 적용됩니다.</td>
+		</tr>
+	</table>
+</div>
+		
+

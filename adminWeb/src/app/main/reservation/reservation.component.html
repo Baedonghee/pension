@@ -1,0 +1,85 @@
+<div class="container">
+	<h3>전체예약현황</h3>
+	<hr>
+	<h3>예약일자</h3>
+	<ic-datepicker class="datepicker" options="datepickerOptions" (dateChange)="onDatepickerDateChange($event)"></ic-datepicker>
+	<a class="btn btn-default pull-right" (click)="allList()">전체목록</a>
+	<div *ngIf="showAll"> 
+	<table class="table table-striped text-align" >
+		<thead>
+			<tr>
+				<th style="width: 15%">년도</th>
+				<th style="width: 15%">월</th>
+				<th style="width: 10%">일</th>
+				<th style="width: 10%">예약자</th>
+				<th style="width: 10%">방이름</th>
+				<th style="width: 10%">예약자정보</th>
+				<th style="width: 10%">편집</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor = "let reservation of reservationarray | paginate : { itemsPerPage: 10, currentPage: p}">
+				<td>{{reservation.reservation_year}}</td>
+				<td>{{reservation.reservation_month}}</td>
+				<td>{{reservation.reservation_day}}</td>
+				<td>{{reservation.user_name}}</td>
+				<td>{{reservation.reservation_room}}</td>
+				<td>
+				<a class="btn btn-default button-size" (click)="onUserinfo(reservation); usermodal.open()">예약자정보</a>
+				</td>
+				<td><a class="btn btn-default button-size" (click)="onDelete(reservation)">삭제</a></td>
+			</tr>
+		</tbody>
+	</table>
+	<div style="text-align: center;">
+		<pagination-controls class="my-pagination" (pageChange)="p = $event"></pagination-controls>
+	</div>
+	</div>
+	<div *ngIf="showSearch">
+	<table class="table table-striped text-align" >
+		<thead>
+			<tr>
+				<th style="width: 15%">년도</th>
+				<th style="width: 15%">월</th>
+				<th style="width: 10%">일</th>
+				<th style="width: 10%">예약자</th>
+				<th style="width: 10%">방이름</th>
+				<th style="width: 10%">예약자정보</th>
+				<th style="width: 10%">편집</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor = "let reservation of reservationSearcharray">
+				<td>{{reservation.reservation_year}}</td>
+				<td>{{reservation.reservation_month}}</td>
+				<td>{{reservation.reservation_day}}</td>
+				<td>{{reservation.user_name}}</td>
+				<td>{{reservation.reservation_room}}</td>
+				<td>
+				<a class="btn btn-default button-size" (click)="onUserinfo(reservation); usermodal.open()">예약자정보</a>
+				</td>
+				<td><a class="btn btn-default button-size" (click)="onDelete(reservation)">삭제</a></td>
+			</tr>
+		</tbody>
+	</table>
+	</div>
+	<hr />
+
+	<a class="btn btn-default pull-right" [routerLink]="['/main/reservation/add']">예약하기</a>
+</div>
+
+<modal #usermodal>
+    <modal-header [show-close]="true">
+        <h4 class="modal-title">예약자정보</h4>
+    </modal-header>
+    <modal-body>
+        이름 : {{username}}<br/>
+		핸드폰 : {{userphone}}<br/>
+		인원 : {{userperson}}명<br/>
+		가격 : {{userpay}}원<br/>
+		메모 : {{usermemo}}<br/>
+    </modal-body>
+    <modal-footer>
+    	<button type="button" class="btn btn-default" data-dismiss="modal" (click)="usermodal.dismiss()">OK</button>
+    </modal-footer>
+</modal>

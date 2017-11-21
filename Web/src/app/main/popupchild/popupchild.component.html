@@ -1,0 +1,24 @@
+<!-- <div style="background-color: red; height:200px; margin-top: 0px;">
+	<h2>Child Component</h2>
+    <div class="text">
+        <span [hidden]="!showText">I am visible now! Thanks to {{visibilitySource}}</span>
+    </div>
+    <div>
+        <button (click)="toggleVisibility('Child Component')">Show/Hide Text</button>
+    </div>
+</div> -->
+<div style="background-color: white;  width: 300px; height:300px;">
+	<div id="head">
+	<img [src]="pensionimg" class="pensionimg"/>
+	</div>
+	<div id="body">
+		<p class="title">{{title}}</p>
+		<p class="content">{{content}}</p>
+	</div>
+	<div id="foot">
+		<input type="checkbox" value="1" (click)="todayagree()">
+		<label>오늘 하루 이창을 열지 않음</label>
+		
+		<a role="button" style="cursor:pointer; text-decoration: none;" (click)="onclose()">[창닫기]</a>
+	</div>
+</div>

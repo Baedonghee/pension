@@ -1,0 +1,145 @@
+#sh_content_tit{
+	margin-bottom:20px;
+	overflow:hidden
+}
+#sh_content_tit:after{
+	clear:both
+}
+#sh_content_tit h3{
+	float:left;
+	padding:0;
+	font-size:2.1em;
+	line-height:1.3em;
+	color:#fff;
+	font-weight:none;
+	letter-spacing:-0.03em
+}
+#sh_content_tit span{
+	float:right;
+	margin-top:12px;
+	padding-left:15px;
+	color:#666
+}
+.seasoninfo {
+	padding-top: 20px;
+}
+.seasoninfo table {
+	position: relative;
+	margin: auto;
+	width: 98%;
+	height: 150px;
+	float: center;
+}
+.seasoninfo th, td {
+	background-color: #272727;
+	color: #747474;
+	text-align: left;
+	padding-left: 20px;
+}
+table, th, td {
+	
+	border: 1px solid #444444;
+	border-collapse: collapse;
+
+}
+th, td {
+	padding: 5px;
+	color: white;
+	text-align: center;
+}
+h4 {
+	color: #bdbdbd;
+	font-size:1.7em;
+}
+.basic {
+	padding-top: 20px;
+}
+.basic table {
+	position: relative;
+	margin: auto;
+	width: 98%;
+	height: 120px;
+	float: center;
+}
+.basic th, td {
+	background-color: #272727;
+	color: #747474;
+	text-align: left;
+	padding-left: 20px;
+}
+.reservationinfo {
+	padding-top: 20px;
+}
+.reservationinfo table {
+	position: relative;
+	margin: auto;
+	width: 98%;
+	height: 120px;
+	float: center;
+}
+.reservationinfo th, td {
+	background-color: #272727;
+	color: #747474;
+	text-align: left;
+	padding-left: 20px;
+}
+.reservationdetail {
+	padding-top: 20px;
+}
+.reservationdetail table {
+	position: relative;
+	margin: auto;
+	width: 98%;
+	height: 120px;
+	float: center;
+}
+.reservationdetail th, td {
+	background-color: #272727;
+	color: #747474;
+	text-align: left;
+	padding-left: 20px;
+}
+.roominfo {
+	padding-top: 20px;
+}
+.roominfo table {
+	position: relative;
+	margin: auto;
+	width: 98%;
+	height: 120px;
+	float: center;
+}
+.roominfo th, td {
+	background-color: #272727;
+	color: #747474;
+	text-align: left;
+	padding-left: 20px;
+}
+.tbc table {
+	position: relative;
+	margin: auto;
+	width: 98%;
+	height: 120px;
+	float: center;
+}
+.tbcth {
+	color:red;
+	background-color: red;
+}
+.btn_submit {
+	padding:0px 10px;
+	height:32px;
+	border:0;
+	background:#555;
+	color:#fff;
+	letter-spacing:-0.1em;
+	cursor:pointer;
+	font-size: 13px;
+}
+.btn_div {
+	padding-top: 10px;
+	text-align: center;
+}
+.star {
+	color: red;
+}

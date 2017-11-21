@@ -1,0 +1,37 @@
+#sh_content_tit{
+	margin-bottom:20px;
+	overflow:hidden
+}
+#sh_content_tit:after{
+	clear:both
+}
+#sh_content_tit h3{
+	float:left;
+	padding:0;
+	font-size:2.1em;
+	line-height:1.3em;
+	color:#fff;
+	font-weight:none;
+	letter-spacing:-0.03em
+}
+#sh_content_tit span{
+	float:right;
+	margin-top:12px;
+	padding-left:15px;
+	color:#666
+}
+.aligncenter {
+	position: relative;
+	padding-left: 10px;
+}
+agm-map {
+	position: relative;
+	width: 1050px;
+	height:600px;
+}
+p {
+	color:white;
+}
+p.address {
+	color:black;
+}

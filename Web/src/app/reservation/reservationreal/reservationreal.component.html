@@ -1,0 +1,49 @@
+
+<div id="sh_content_tit">
+	<h3>실시간예약</h3>
+	<span>HOME > Reservation > 실시간예약 </span>
+</div>
+
+<div class="yearmonth">
+	<ul>
+		<li><a role="button" (click)="prevmonth(currentmonth-1,currentyear)"><span class="glyphicon glyphicon-chevron-left white"></span></a></li>
+		<li><p>{{currentyear}}.{{currentmonth}}</p></li>
+		<li><a role="button" (click)="nextmonth(currentmonth+1,currentyear)"><span class="glyphicon glyphicon-chevron-right white"></span></a></li>
+	</ul>
+</div>
+<div class="calendar">
+	<table>
+		<tr >
+			<td *ngFor="let day of days" class="daytext">{{day}}</td>
+		</tr>
+		<tr *ngFor="let row of buildArr(daysnumber)" class="dayoftext">
+			<ng-container *ngFor="let item of row">
+				<td *ngIf="item.num==0"></td>
+				<td *ngIf="item.num!=0"><p class="days">{{item.num}}</p>
+				<a (click)="reservation1(item)">
+				<p class="blue" *ngIf="item.reservation1=='예약가능'">나무사이:{{item.reservation1}}</p></a>
+				<p class="black" *ngIf="item.reservation1=='예약대기'">나무사이:{{item.reservation1}}</p>
+				<p class="red" *ngIf="item.reservation1=='예약불가'">나무사이:{{item.reservation1}}</p>
+				<a (click)="reservation2(item)">
+				<p class="blue" *ngIf="item.reservation2=='예약가능'">구름위에:{{item.reservation2}}</p></a>
+				<p class="black" *ngIf="item.reservation2=='예약대기'">구름사이:{{item.reservation2}}</p>
+				<p class="red" *ngIf="item.reservation2=='예약불가'">구름위에:{{item.reservation2}}</p>
+				<a (click)="reservation3(item)">
+				<p class="blue" *ngIf="item.reservation3=='예약가능'">초원위에:{{item.reservation3}}</p></a>
+				<p class="black" *ngIf="item.reservation3=='예약대기'">초원위에:{{item.reservation3}}</p>
+				<p class="red" *ngIf="item.reservation3=='예약불가'">초원위에:{{item.reservation3}}</p>
+				<a (click)="reservation4(item)">
+				<p class="blue" *ngIf="item.reservation4=='예약가능'">별빛가득:{{item.reservation4}}</p></a>
+				<p class="black" *ngIf="item.reservation4=='예약대기'">별빛가득:{{item.reservation4}}</p>
+				<p class="red" *ngIf="item.reservation4=='예약불가'">별빛가득:{{item.reservation4}}</p>
+				<a (click)="reservation5(item)">
+				<p class="blue" *ngIf="item.reservation5=='예약가능'">새벽숲속:{{item.reservation5}}</p></a>
+				<p class="black" *ngIf="item.reservation5=='예약대기'">새벽숲속:{{item.reservation5}}</p>
+				<p class="red" *ngIf="item.reservation5=='예약불가'">새벽숲속:{{item.reservation5}}</p>
+				</td>
+
+			</ng-container>
+		</tr>
+		
+	</table>
+</div>

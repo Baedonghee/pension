@@ -1,0 +1,36 @@
+<header>
+<div id="header_container">
+	<div id="header_wrapper">
+		<app-header></app-header>
+	</div>
+</div>
+</header>
+
+<div>
+	<img [src]="bannerImg" *ngIf="showbanner"/>
+</div>
+
+		
+<body>
+<div *ngIf="showpopup">
+<app-popupchild class="mainpopup"></app-popupchild>
+</div>
+	
+	<div id="sh_container">
+
+		<div id="sh_container_wrapper">
+			<router-outlet></router-outlet>
+		</div>
+	</div>
+
+</body>
+<hr class="abc">
+<footer>
+
+	<div id="sh_footer">
+		<div id="sh_footer_wrapper">
+			<app-footer></app-footer>
+		</div>
+	</div>
+</footer>
+	

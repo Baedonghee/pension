@@ -1,0 +1,55 @@
+<div class="header">
+	<div class="headerphoto">
+		<img class="headerImg" [src]="headerImg" [routerLink]="['/']"/>
+	</div>
+	<div class="headerul">
+		<ul id="top_nav">
+			<li class="list01" (mouseenter)="mouseEnterAbout(1)" (mouseleave)="mouseLeaveAbout(0)">
+				<a role="button" [routerLink]="['/about']"><h4>About</h4></a>
+					<ul class="aboutul" *ngIf="aboutshow">
+						<li ><a role="button" [routerLink]="['/about']">펜션소개</a></li>
+						<li><a role="button" [routerLink]="['/about/view']">외부전경</a></li>
+						<li><a role="button" [routerLink]="['/about/address']">오시는길</a></li>
+					</ul>
+			</li>
+			<li class="list02" (mouseenter)="mouseEnterRoom(1)" (mouseleave)="mouseLeaveRoom(0)">
+				<a role="button" [routerLink]="['/room']"><h4>Room View</h4></a>
+					<ul class="roomul" *ngIf="roomshow">
+						<li><a role="button" [routerLink]="['/room']">List Type</a></li>
+					</ul>
+			</li>
+			<li class="list03" (mouseenter)="mouseEnterSpecial(1)" (mouseleave)="mouseLeaveSpecial(0)">
+				<a role="button" [routerLink]="['/special']"><h4>Special</h4></a>
+				 <ul class="specialul" *ngIf="specialshow">
+				 	<li><a role="button" [routerLink]="['/special']">바베큐</a></li>
+				 	<li><a role="button" [routerLink]="['/special/singroom']">노래방</a></li>
+				 	<li><a role="button" [routerLink]="['/special/pickup']">픽업서비스</a></li>
+				 </ul>
+			</li>
+			<li class="list04" (mouseenter)="mouseEnterReservation(1)" (mouseleave)="mouseLeaveReservation(0)">
+				<a role="button" [routerLink]="['/reservation']"><h4>Reservation</h4></a>
+					<ul class="reservationul" *ngIf="reservationshow">
+						<li><a role="button" [routerLink]="['/reservation']">예약안내</a></li>
+						<li><a role="button" [routerLink]="['/reservation/realtime']">실시간예약</a></li>
+					</ul>
+			</li>
+			<li class="list05" (mouseenter)="mouseEnterTour(1)" (mouseleave)="mouseLeaveTour(0)">
+				<a role="button" [routerLink]="['/tour']"><h4>Tour</h4></a>
+					<ul class="tourul" *ngIf="tourshow">
+						<li><a role="button" [routerLink]="['/tour']">대관령양떼목장</a></li>
+						<li><a role="button" [routerLink]="['/tour/tour2']">경포대해수욕장</a></li>
+						<li><a role="button" [routerLink]="['/tour/tour3']">커피박물관</a></li>
+						<li><a role="button" [routerLink]="['/tour/tour4']">참소리박물관</a></li>
+					</ul>
+			</li>
+			<li class="list06" (mouseenter)="mouseEnterCommunity(1)" (mouseleave)="mouseLeaveCommunity(0)">
+				<a role="button" [routerLink]="['/notice']"><h4>Community</h4></a>
+					<ul class="communityul" *ngIf="communityshow">
+						<li><a role="button" [routerLink]="['/notice']">공지사항</a></li>
+						<li><a role="button" [routerLink]="['/notice/reservationnotice']">예약문의</a></li>
+					</ul>
+			</li>
+		</ul>
+	</div>
+
+</div>

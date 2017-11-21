@@ -1,0 +1,119 @@
+#sh_content_tit{
+	margin-bottom:20px;
+	overflow:hidden
+}
+#sh_content_tit:after{
+	clear:both
+}
+#sh_content_tit h3{
+	float:left;
+	padding:0;
+	font-size:2.1em;
+	line-height:1.3em;
+	color:#fff;
+	font-weight:none;
+	letter-spacing:-0.03em
+}
+#sh_content_tit span{
+	float:right;
+	margin-top:12px;
+	padding-left:15px;
+	color:#666
+}
+.roomthumbnailimg {
+	position: relative;
+	width:84px;
+	height: 63px;
+}
+ul {
+	position: relative;
+	padding-top: 30px;
+	text-align: center;
+}
+li {
+	display: inline;
+}
+.white {
+	color: white;
+}
+.roominfo h3 {
+	color: #bdbdbd;
+}
+.roominfo table {
+	position: relative;
+	margin: auto;
+	width: 98%;
+	height: 100px;
+	float: center;
+}
+table, th, td {
+
+	border: 1px solid white;
+	border-collapse: collapse;
+
+}
+
+th, td {
+	padding: 5px;
+	color: white;
+	text-align: center;
+}
+.payinfo h3 {
+	color: #bdbdbd;
+}
+.payinfo table {
+	position: relative;
+	margin: auto;
+	width: 98%;
+	height: 150px;
+	float: center;
+}
+.roominfotr th {
+	background-color:#3f3f3f;
+	font-size:18px;
+	color: #c9cccc;
+}
+.roominfoth th {
+	color: #999999;
+	font-size: 14px;
+}
+.payinfotr td {
+	background-color:#3f3f3f;
+	font-size:18px;
+	color: #c9cccc;
+}
+.payinfotr th {
+	background-color:#3f3f3f;
+	font-size:18px;
+	color: #c9cccc;
+}
+.payinfotd td {
+	color: #999999;
+	font-size: 14px;
+}
+.iteminfo h3 {
+	color: #bdbdbd;
+}
+.iteminfo table {
+	position: relative;
+	margin: auto;
+	width: 98%;
+	height: 150px;
+	float: center;
+}
+.iteminfo td {
+	color: #999999;
+}
+.etcinfo h3 {
+	color: #bdbdbd;
+}
+.etcinfo table {
+	position: relative;
+	margin: auto;
+	width: 98%;
+	height: 150px;
+	float: center;
+}
+.etcinfo td {
+	color: #999999;
+}

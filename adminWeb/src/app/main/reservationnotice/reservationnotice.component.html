@@ -1,0 +1,41 @@
+<div class="container">
+<h3>예약문의</h3>
+	<table class="table table-striped text-align">
+		<thead>
+			<tr>
+				<th style="width: 10%">번호</th>
+				<th >제목</th>
+				<th style="width: 10%">작성자</th>
+				<th style="width: 10%">날짜</th>
+				<th style="width: 10%">편집</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor = "let reservationnotice of reservationnoticearray | paginate : { itemsPerPage: 10, currentPage: p}">
+				<td>{{reservationnotice.reservationnoticeid}}</td>
+				<td><a role="button" style="cursor:pointer; text-decoration: none;" (click)="onNoticeinfo(reservationnotice); noticemodal.open()">{{reservationnotice.reservationnotice_noticetitle}}</a></td>
+				<td>{{reservationnotice.reservationnotice_userid}}</td>
+				<td>{{reservationnotice.reservationnotice_noticedate}}</td>
+				<td><a class="btn btn-default button-size" (click)="onDelete(reservationnotice)">삭제</a></td>
+			</tr>
+			
+		</tbody>
+	</table>
+	<div style="text-align: center;">
+		<pagination-controls class="my-pagination" (pageChange)="p = $event"></pagination-controls>
+	</div>
+	<hr />
+	
+</div>
+
+<modal #noticemodal>
+    <modal-header [show-close]="true">
+        <h4 class="modal-title">예약자정보</h4>
+    </modal-header>
+    <modal-body>
+        내용 : {{reservationcontent}}
+    </modal-body>
+    <modal-footer>
+    	<button type="button" class="btn btn-default" data-dismiss="modal" (click)="noticemodal.dismiss()">OK</button>
+    </modal-footer>
+</modal>

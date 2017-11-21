@@ -1,0 +1,17 @@
+#sh_content {
+	z-index:4;
+	position:relative;
+	float:left;
+	padding:15px 0 15px 0;
+	width:1070px;
+	min-height:440px;
+	background:#2e2e2e;
+	font-size:1.1em;
+	zoom:1
+}
+#sh_content:after {
+	display:block;
+	visibility:hidden;
+	clear:both;
+	content:""
+}

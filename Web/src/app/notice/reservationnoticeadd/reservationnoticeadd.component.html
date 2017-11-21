@@ -1,0 +1,51 @@
+<div id="sh_content_tit">
+	<h3>예약문의(글쓰기)</h3>
+	<span>HOME > Community > 예약문의 </span>
+</div>
+
+<div class="addreservationdiv">
+	
+	<table width="100%" boarder="0" cellspacing="0" cellpadding="0">
+		<colgroup width="90"></colgroup>
+		<colgroup width=""></colgroup>
+		<tr>
+			<td style="color: white;">작성자</td>
+			<td><input type="text" class="field" maxlength="20" size="15" [(ngModel)]="name" required value=""></td>
+		</tr>
+		<tr>
+			<td colspan="2" height="1" bgcolor="#e7e7e7"></td>
+		</tr>
+		<tr>
+			<td style="color: white;">비밀번호</td>
+			<td><input class="field" type="password" maxlength="20" size="15" [(ngModel)]="password" required></td>
+		</tr>
+		<tr>
+			<td colspan="2" height="1" bgcolor="#e7e7e7"></td>
+		</tr>
+		<tr>
+			<td style="color: white;">제목</td>
+			<td><input type="text" class="field" style="width: 98%;" [(ngModel)]="subject" id="wr_subject" required value=""></td>
+		</tr>
+		<tr>
+			<td colspan="2" height="1" bgcolor="#e7e7e7"></td>
+		</tr>
+		<tr>
+			<td style="color: white">내용</td>
+			<td style="padding: 5 0 5 0">
+				<textarea [(ngModel)]="content" id="tx_wr_content" style="width: 98%; height:200px"></textarea>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" height="1" bgcolor="#e7e7e7"></td>
+		</tr>
+	</table>	
+</div>
+<div style="clear:both; margin-top: 7px; height:31px; padding-right: 1%">
+	<div style="float: left;">
+		<a class="btn btn-default" [routerLink]="['/notice/reservationnotice']">목록</a>
+	</div>
+	<div style="float: right;">
+		<a class="btn btn-default" (click)="reservationnoticeadd()">작성완료</a>
+	</div>
+
+</div>
